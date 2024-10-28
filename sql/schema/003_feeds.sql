@@ -6,7 +6,7 @@ CREATE TABLE feeds (
     updated_at TIMESTAMP NOT NULL,
     name text NOT NULL,
     url text UNIQUE NOT NULL,
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE
 );
 
 -- +goose Down
